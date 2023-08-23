@@ -21,10 +21,10 @@
     {% for quest in quest %}
     <h4 style="text-align: center;">{{quest.question}}</h4>
     <ol>
-      <li>{{quest.alt_a}}</li>
-      <li>{{quest.alt_b}}</li>
-      <li>{{quest.alt_c}}</li>
-      <li>{{quest.alt_d}}</li>
+      <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;">A) {{quest.alt_a}}</button>
+      <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;">B) {{quest.alt_b}}</button>
+      <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;">C) {{quest.alt_c}}</button>
+      <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;">D) {{quest.alt_d}}</button>
     </ol>
     {% endfor %}   <!-- Optional JavaScript; choose one of the two! -->
 
