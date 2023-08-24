@@ -1,4 +1,4 @@
-# 🐋🇧🇷Projeto de Questionário com Docker
+# 🐋Projeto de Questionário com Docker
 
 # Objetivo:
 
@@ -66,7 +66,7 @@ python manage.py createsuperuser
 
 Assim você terá acesso a parte administrativa do projeto onde poderá criar novas perguntas. 
 
-# **🐋** 🇺🇸**Docker-based Questionnaire Project**
+# **🐋**Docker-based Questionnaire Project**
 
 # **Objective:**
 
@@ -128,3 +128,13 @@ docker-compose up
 ```
 
 This will containerize the entire database within a Docker environment.
+## **⚙️Project**
+
+This is a simple quiz application where a question is compared with an answer, and if the correct answer is clicked, an **`alert`** pops up to indicate its correctness. To add a new question, access the **`/admin`** section of the local project at **`http://127.0.0.1:8000/admin`**. To gain access, create a **`superuser`** account for yourself using the following command:
+
+```python
+
+python manage.py createsuperuser
+```
+
+This will grant you access to the project's administrative area, where you can create new questions.
