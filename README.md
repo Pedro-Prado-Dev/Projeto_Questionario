@@ -66,7 +66,7 @@ python manage.py createsuperuser
 
 Assim você terá acesso a parte administrativa do projeto onde poderá criar novas perguntas. 
 
-# **🐋**Docker-based Questionnaire Project
+# 🐋Docker-based Questionnaire Project
 
 # **Objective:**
 
