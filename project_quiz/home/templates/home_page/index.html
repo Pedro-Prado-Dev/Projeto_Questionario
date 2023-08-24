@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,19 +19,41 @@
       </div>
     </nav>
     
-    {% for quest in quest %}
-    <h4 style="text-align: center;">{{quest.question}}</h4>
-    <ol>
-      <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;">A) {{quest.alt_a}}</button>
-      <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;">B) {{quest.alt_b}}</button>
-      <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;">C) {{quest.alt_c}}</button>
-      <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;">D) {{quest.alt_d}}</button>
-    </ol>
-    {% endfor %}   <!-- Optional JavaScript; choose one of the two! -->
+{% for question in quest %}
+<h4 style="text-align: center;">{{ question.question }}</h4>
+<ol>
+  <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;" data-alt="{{ question.alt_a }}" data-resp="{{ question.resp }}">A) {{ question.alt_a }}</button>
+  <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;" data-alt="{{ question.alt_b }}" data-resp="{{ question.resp }}">B) {{ question.alt_b }}</button>
+  <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;" data-alt="{{ question.alt_c }}" data-resp="{{ question.resp }}">C) {{ question.alt_c }}</button>
+  <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;" data-alt="{{ question.alt_d }}" data-resp="{{ question.resp }}">D) {{ question.alt_d }}</button>
+</ol>
+<script>
+  var buttons = document.querySelectorAll('[data-alt]');
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var alt = button.getAttribute('data-alt');
+      var resp = button.getAttribute('data-resp');
+      compare(alt, resp);
+    });
+  });
+
+  function compare(quest, resp) {
+    console.log(quest, resp);
+    if (quest === resp) {
+      // Pop-up positivo
+      alert('Resposta correta!');
+    } else {
+      // Pop-up negativo
+      alert('Resposta incorreta.');
+    }
+  }
+</script>
+{% endfor %}
+  <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!-- 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
