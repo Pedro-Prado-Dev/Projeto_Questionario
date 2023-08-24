@@ -27,6 +27,8 @@
   <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;" data-alt="{{ question.alt_c }}" data-resp="{{ question.resp }}">C) {{ question.alt_c }}</button>
   <button type="button" class="btn btn-secondary" style="display: list-item; margin-bottom: 6px;" data-alt="{{ question.alt_d }}" data-resp="{{ question.resp }}">D) {{ question.alt_d }}</button>
 </ol>
+
+{% endfor %}
 <script>
   var buttons = document.querySelectorAll('[data-alt]');
   buttons.forEach(function(button) {
@@ -48,7 +50,6 @@
     }
   }
 </script>
-{% endfor %}
   <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
