@@ -63,9 +63,14 @@ Para criar uma nova pergunta basta acessar o `/admin` do projeto local `[http://
 ```python
 python manage.py createsuperuser
 ```
-https://github.com/Pedro-Prado-Dev/projeto_Questionario/assets/100048797/bbbf2d7f-48e4-46b5-be15-3c4ed86e0da6
 
 Assim você terá acesso a parte administrativa do projeto onde poderá criar novas perguntas. 
+#
+
+
+https://github.com/Pedro-Prado-Dev/projeto_Questionario/assets/100048797/78f935a1-53b6-44d3-91cf-d6eabf002dbb
+
+---
 
 # 🐋Docker-based Questionnaire Project
 
@@ -139,3 +144,6 @@ python manage.py createsuperuser
 ```
 
 This will grant you access to the project's administrative area, where you can create new questions.
+#
+
+https://github.com/Pedro-Prado-Dev/projeto_Questionario/assets/100048797/78f935a1-53b6-44d3-91cf-d6eabf002dbb
